@@ -6,10 +6,11 @@ const Counter = () => {
   //The function below is called a selector and allows us to select a value from
   // the state.
   const count = useSelector((state) => state.counter.count);
+  const currentColor = useSelector((state) => state.counter.currentColor);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div style={{ backgroundColor: currentColor, height: 200 }}>
       <button
         aria-label="Decrement value"
         onClick={() => {
